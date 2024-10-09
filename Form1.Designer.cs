@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            tbScreen = new TextBox();
             btnNumber7 = new Button();
             btnNumber8 = new Button();
             btnNumber9 = new Button();
@@ -48,16 +48,16 @@
             btnOpEq = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // tbScreen
             // 
-            textBox1.Enabled = false;
-            textBox1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            textBox1.Location = new Point(13, 12);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(575, 43);
-            textBox1.TabIndex = 0;
-            textBox1.TextAlign = HorizontalAlignment.Right;
+            tbScreen.Enabled = false;
+            tbScreen.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 238);
+            tbScreen.Location = new Point(13, 12);
+            tbScreen.Margin = new Padding(4, 5, 4, 5);
+            tbScreen.Name = "tbScreen";
+            tbScreen.Size = new Size(575, 43);
+            tbScreen.TabIndex = 0;
+            tbScreen.TextAlign = HorizontalAlignment.Right;
             // 
             // btnNumber7
             // 
@@ -68,6 +68,7 @@
             btnNumber7.TabIndex = 1;
             btnNumber7.Text = "7";
             btnNumber7.UseVisualStyleBackColor = true;
+            btnNumber7.Click += OnBtnNumberClick;
             // 
             // btnNumber8
             // 
@@ -78,6 +79,7 @@
             btnNumber8.TabIndex = 2;
             btnNumber8.Text = "8";
             btnNumber8.UseVisualStyleBackColor = true;
+            btnNumber8.Click += OnBtnNumberClick;
             // 
             // btnNumber9
             // 
@@ -88,6 +90,7 @@
             btnNumber9.TabIndex = 3;
             btnNumber9.Text = "9";
             btnNumber9.UseVisualStyleBackColor = true;
+            btnNumber9.Click += OnBtnNumberClick;
             // 
             // btnOpAdd
             // 
@@ -98,6 +101,7 @@
             btnOpAdd.TabIndex = 4;
             btnOpAdd.Text = "+";
             btnOpAdd.UseVisualStyleBackColor = true;
+            btnOpAdd.Click += OnBtnOperationClick;
             // 
             // btnNumber4
             // 
@@ -108,6 +112,7 @@
             btnNumber4.TabIndex = 5;
             btnNumber4.Text = "4";
             btnNumber4.UseVisualStyleBackColor = true;
+            btnNumber4.Click += OnBtnNumberClick;
             // 
             // btnNumber5
             // 
@@ -118,6 +123,7 @@
             btnNumber5.TabIndex = 6;
             btnNumber5.Text = "5";
             btnNumber5.UseVisualStyleBackColor = true;
+            btnNumber5.Click += OnBtnNumberClick;
             // 
             // btnNumber6
             // 
@@ -128,6 +134,7 @@
             btnNumber6.TabIndex = 7;
             btnNumber6.Text = "6";
             btnNumber6.UseVisualStyleBackColor = true;
+            btnNumber6.Click += OnBtnNumberClick;
             // 
             // btnOpSub
             // 
@@ -138,6 +145,7 @@
             btnOpSub.TabIndex = 8;
             btnOpSub.Text = "-";
             btnOpSub.UseVisualStyleBackColor = true;
+            btnOpSub.Click += OnBtnOperationClick;
             // 
             // btnNumber1
             // 
@@ -148,6 +156,7 @@
             btnNumber1.TabIndex = 9;
             btnNumber1.Text = "1";
             btnNumber1.UseVisualStyleBackColor = true;
+            btnNumber1.Click += OnBtnNumberClick;
             // 
             // btnNumber2
             // 
@@ -158,6 +167,7 @@
             btnNumber2.TabIndex = 10;
             btnNumber2.Text = "2";
             btnNumber2.UseVisualStyleBackColor = true;
+            btnNumber2.Click += OnBtnNumberClick;
             // 
             // btnNumber3
             // 
@@ -168,6 +178,7 @@
             btnNumber3.TabIndex = 11;
             btnNumber3.Text = "3";
             btnNumber3.UseVisualStyleBackColor = true;
+            btnNumber3.Click += OnBtnNumberClick;
             // 
             // btnOpMul
             // 
@@ -178,6 +189,7 @@
             btnOpMul.TabIndex = 12;
             btnOpMul.Text = "*";
             btnOpMul.UseVisualStyleBackColor = true;
+            btnOpMul.Click += OnBtnOperationClick;
             // 
             // btnNumber0
             // 
@@ -188,6 +200,7 @@
             btnNumber0.TabIndex = 13;
             btnNumber0.Text = "0";
             btnNumber0.UseVisualStyleBackColor = true;
+            btnNumber0.Click += OnBtnNumberClick;
             // 
             // btnOpPoint
             // 
@@ -198,6 +211,7 @@
             btnOpPoint.TabIndex = 14;
             btnOpPoint.Text = ".";
             btnOpPoint.UseVisualStyleBackColor = true;
+            btnOpPoint.Click += OnBtnNumberClick;
             // 
             // btnOpDiv
             // 
@@ -208,6 +222,7 @@
             btnOpDiv.TabIndex = 15;
             btnOpDiv.Text = "/";
             btnOpDiv.UseVisualStyleBackColor = true;
+            btnOpDiv.Click += OnBtnOperationClick;
             // 
             // btnOpClear
             // 
@@ -218,6 +233,7 @@
             btnOpClear.TabIndex = 16;
             btnOpClear.Text = "C";
             btnOpClear.UseVisualStyleBackColor = true;
+            btnOpClear.Click += OnBtnClearClick;
             // 
             // btnOpEq
             // 
@@ -228,6 +244,7 @@
             btnOpEq.TabIndex = 17;
             btnOpEq.Text = "=";
             btnOpEq.UseVisualStyleBackColor = true;
+            btnOpEq.Click += OnBtnResultClick;
             // 
             // Form1
             // 
@@ -251,7 +268,7 @@
             Controls.Add(btnNumber9);
             Controls.Add(btnNumber8);
             Controls.Add(btnNumber7);
-            Controls.Add(textBox1);
+            Controls.Add(tbScreen);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 238);
             Margin = new Padding(4, 5, 4, 5);
             MaximumSize = new Size(620, 650);
@@ -264,7 +281,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbScreen;
         private System.Windows.Forms.Button btnNumber7;
         private System.Windows.Forms.Button btnNumber8;
         private System.Windows.Forms.Button btnNumber9;
